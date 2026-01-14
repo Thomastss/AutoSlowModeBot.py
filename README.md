@@ -16,8 +16,8 @@ A robust Discord moderation bot designed to handle chat floods with dynamic slow
 ## 🛠️ Installation
 
 1.  Clone the repository:
-    git clone https://github.com/yourusername/your-repo-name.git
-    cd your-repo-name
+    git clone https://github.com/Thomastss/AutoSlowModeBot.py.git
+    cd AutoSlowModeBot.py
 
 2.  Install the required dependencies:
     pip install -r requirements.txt
