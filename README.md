@@ -1,6 +1,6 @@
-# AutoSlowModeBot (Python)
+# Discord Guard Bot (Python)
 
-A robust Discord moderation bot designed to handle chat floods with dynamic slowmode, channel locking capabilities, and automated logging.
+A robust Discord moderation bot designed to handle chat floods with dynamic slowmode, channel locking capabilities, and automated logging with Embeds.
 
 ## 🚀 Features
 
@@ -8,8 +8,8 @@ A robust Discord moderation bot designed to handle chat floods with dynamic slow
 * **Auto-Reset:** A background task disables slowmode once the chat calms down.
 * **Admin Immunity:** Admins/Moderators are exempt from slowmode logic.
 * **Lock/Unlock System:** Quickly lock a channel for @everyone.
-* **Centralized Logging:** Sends moderation actions to a designated log channel.
-* **Secure Configuration:** Uses .env files to keep secrets safe.
+* **Centralized Embed Logging:** Sends moderation actions to a designated log channel with timestamps and mentions.
+* **Customizable Prefix:** Change your bot's prefix easily via environment variables.
 
 ## 🛠️ Installation
 
@@ -18,11 +18,11 @@ A robust Discord moderation bot designed to handle chat floods with dynamic slow
     cd your-repo-name
 
 2.  Install the required dependencies:
-    pip install discord.py python-dotenv
+    pip install -r requirements.txt
 
 3.  Set up your environment variables:
     * Copy the .env.example file and rename it to .env
-    * Open .env and paste your Discord Token and Log Channel ID.
+    * Open .env and fill in your details.
 
 4.  Create your Discord Bot:
     * Go to the Discord Developer Portal (https://discord.com/developers/applications).
@@ -31,10 +31,17 @@ A robust Discord moderation bot designed to handle chat floods with dynamic slow
 
 ## ⚙️ Configuration (.env)
 
-Your .env file should look like this (but with your real data):
+Your .env file should follow this structure:
+
 ```.env
-DISCORD_TOKEN=your_bot_token_here
+# Discord Bot Token (Get it from Discord Developer Portal)
+DISCORD_TOKEN=your_token_here_is_hidden
+
+# The ID of the channel where the bot will post logs
 LOG_CHANNEL_ID=your_log_channel_id_here
+
+# The prefix that you want the bot to use for commands
+COMMAND_PREFIX=!
 ```
 
 ## 🎮 Commands
@@ -44,9 +51,11 @@ LOG_CHANNEL_ID=your_log_channel_id_here
 | !lock | Manage Roles | Completely locks the channel for regular members. |
 | !unlock | Manage Roles | Unlocks the channel and resets permissions. |
 
+*Note: Use the prefix defined in your .env file.*
+
 ## 📝 How it Works
 
-The bot monitors the rate of incoming messages. If more than 10 messages are sent within a 10-second window, it calculates a dynamic slowmode delay (up to 30 seconds). Once it detects 15 seconds of inactivity, it removes the slowmode.
+The bot monitors the rate of incoming messages. If more than 10 messages are sent within a 10-second window, it calculates a dynamic slowmode delay (up to 30 seconds). Once it detects 15 seconds of inactivity, it automatically removes the slowmode. All actions are logged in the specified log channel using rich Embeds.
 
 ## ⚖️ License
 
