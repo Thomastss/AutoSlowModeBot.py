@@ -30,13 +30,10 @@ A robust Discord moderation bot designed to handle chat floods with dynamic slow
 ## ⚙️ Environment Setup (.env)
 
 The bot uses a .env file to store sensitive information. Create a file named .env in the root directory and add the following (without quotes or backticks):
-
+```.env
 DISCORD_TOKEN=your_bot_token_here
 LOG_CHANNEL_ID=your_log_channel_id_here
-
-* DISCORD_TOKEN: Your bot's secret token from the Developer Portal.
-* LOG_CHANNEL_ID: The ID of the channel where you want the bot to post its logs.
-
+```
 ## 🎮 Commands
 
 | Command | Permission | Description |
@@ -50,4 +47,4 @@ The bot monitors the rate of incoming messages. If more than 10 messages are sen
 
 ---
 
-**Created by Thomas 2026**
+**Created by Thomas &copy; 2026**
