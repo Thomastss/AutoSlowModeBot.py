@@ -1,6 +1,6 @@
-# Discord Guard Bot (Python)
+# Discord Auto Slow Mode Bot (Python)
 
-A robust Discord moderation bot designed to handle chat floods with dynamic slowmode, channel locking capabilities, and automated logging with Embeds.
+A robust Discord slowmode bot designed to handle chat floods with dynamic slowmode, channel locking capabilities, and automated logging with Embeds.
 
 [![Discord Support](https://img.shields.io/badge/Discord-Support-7289DA?style=for-the-badge&logo=discord)](https://discord.gg/4YDMkn5u3y)
 
